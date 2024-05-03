@@ -15,9 +15,23 @@ while [ "$choose" != "exit" ]; do
 
     if [ $choose = + ]; then
         result=$(($number1+$number2))
-        echo $result
+        echo "Result: $result"
+    
+    elif [ $choose = - ]; then
+        result=$(($number1-$number2))
+        echo "Result: $result"
+    
+    elif [ $choose = / ]; then
+        result=$(($number1/$number2))
+        echo "Result: $result"
+    
+    elif [ $choose = * ]; then
+        result=$(($number1*$number2))
+        echo "Result: $result"
+    
     elif [ $choose = exit ]; then
         echo "Bye!"
+    
     else 
         echo "Undefined operation!"
     fi
